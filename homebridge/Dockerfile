@@ -16,3 +16,14 @@ ENV TZ=UTC
 
 # Add the nice banner
 ADD https://github.com/hassio-addons/addon-ubuntu-base/raw/v7.0.1/base/rootfs/etc/cont-init.d/00-banner.sh /etc/cont-init.d/
+
+# Relocate homebridge working directory to /data so it can be persisted
+RUN sed -e 's:/homebridge:/data:g' -i \
+      /usr/bin/homebridge-* /usr/bin/with-localenv \
+      /etc/cont-init.d/45-user-data \
+      /etc/cont-init.d/50-plugins \
+      /etc/cont-init.d/55-config-ui \
+      /etc/logrotate.d/homebridge \
+      /etc/services.d/hb*/* /etc/services.d/homebridge*/*
+ENV PATH="${PATH}:/data/node_modules/.bin"
+WORKDIR /data
