@@ -1,5 +1,10 @@
 # Changelog
 
+
+## [0.1.4] - 2022-11-04
+
+- Enable host_network otherwise accessories aren't discovered by Home Assistant.
+
 ## [0.1.3] - 2022-11-04
 
 - Make the addon work again with latest Homebridge

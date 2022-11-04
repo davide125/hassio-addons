@@ -1,5 +1,5 @@
 name: Homebridge
-version: 0.1.3
+version: 0.1.4
 stage: experimental
 slug: homebridge
 description: Lightweight HomeKit API implementation with plugin support
@@ -13,6 +13,7 @@ ports:
 ports_description:
   8581/tcp: Homebridge UI
 webui: http://[HOST]:[PORT:8581]
+host_network: true
 init: false
 map:
   - config:rw
