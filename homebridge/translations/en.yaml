@@ -1,0 +1,6 @@
+---
+configuration:
+  homebridge_workdir:
+    name: Homebridge work directory
+    description: >-
+      Where to store config, plugins, logs, backups, etc.
