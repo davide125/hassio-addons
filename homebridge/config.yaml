@@ -4,7 +4,6 @@ stage: experimental
 slug: homebridge
 description: Lightweight HomeKit API implementation with plugin support
 arch:
-  - armhf
   - armv7
   - aarch64
   - amd64
