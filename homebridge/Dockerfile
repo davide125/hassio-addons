@@ -1,4 +1,4 @@
-FROM oznu/homebridge:ubuntu
+FROM oznu/homebridge:2022-10-14-ubuntu
 
 # Relocate homebridge working directory so it can be persisted
 RUN find /etc/s6-overlay/ -type f | xargs sed -i -E 's:([ "])/homebridge:\1$(cat /data/options.json | jq -r .homebridge_workdir):g'

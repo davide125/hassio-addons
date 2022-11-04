@@ -1,6 +1,10 @@
 # Changelog
 
 
+## [0.1.5] - 2022-11-04
+
+- Use pre-built container image to make installation faster and backups smaller.
+
 ## [0.1.4] - 2022-11-04
 
 - Enable host_network otherwise accessories aren't discovered by Home Assistant.

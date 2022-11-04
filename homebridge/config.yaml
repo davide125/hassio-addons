@@ -21,3 +21,4 @@ options:
   homebridge_workdir: "/config/homebridge"
 schema:
   homebridge_workdir: str
+image: tronikos/{arch}-addon-homebridge
