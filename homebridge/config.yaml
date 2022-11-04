@@ -1,5 +1,5 @@
 name: Homebridge
-version: 0.1.4
+version: 0.1.5
 stage: experimental
 slug: homebridge
 description: Lightweight HomeKit API implementation with plugin support
