@@ -4,7 +4,7 @@ FROM oznu/homebridge:2022-10-14-ubuntu
 RUN find /etc/s6-overlay/ -type f | xargs sed -i -E 's:([ "])/homebridge:\1$(cat /data/options.json | jq -r .homebridge_workdir):g'
 
 # add bashio
-ADD https://github.com/hassio-addons/bashio/archive/v0.14.3.tar.gz  /tmp/bashio.tar.gz
+ADD https://github.com/hassio-addons/bashio/archive/v0.14.3.tar.gz /tmp/bashio.tar.gz
 RUN apt-get update && apt-get install -y curl jq && mkdir /tmp/bashio \
     && tar zxvf \
         /tmp/bashio.tar.gz \
