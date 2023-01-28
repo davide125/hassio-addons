@@ -1,11 +1,17 @@
-FROM oznu/homebridge:2022-10-14-ubuntu
+FROM oznu/homebridge:2023-01-08-ubuntu
 
 # Relocate homebridge working directory so it can be persisted
+SHELL ["/bin/bash", "-o", "pipefail"]
 RUN find /etc/s6-overlay/ -type f | xargs sed -i -E 's:([ "])/homebridge:\1$(cat /data/options.json | jq -r .homebridge_workdir):g'
 
 # add bashio
 ADD https://github.com/hassio-addons/bashio/archive/v0.14.3.tar.gz /tmp/bashio.tar.gz
-RUN apt-get update && apt-get install -y curl jq && mkdir /tmp/bashio \
+# hadolint ignore=DL3008
+RUN apt-get update \
+    && apt-get install --no-install-recommends -y curl jq \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* \
+    && mkdir /tmp/bashio \
     && tar zxvf \
         /tmp/bashio.tar.gz \
         --strip 1 -C /tmp/bashio \
