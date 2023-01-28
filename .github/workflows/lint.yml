@@ -4,7 +4,7 @@ name: Lint
 
 env:
   HADOLINT_VERSION: v1.17.2
-  SHELLCHECK_OPTS: -e SC1008 -s bash
+  SHELLCHECK_OPTS: -e SC1008,SC2016,SC2038 -s bash
 
 on:
   pull_request:

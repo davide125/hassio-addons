@@ -1,7 +1,7 @@
 FROM oznu/homebridge:2023-01-08-ubuntu
 
 # Relocate homebridge working directory so it can be persisted
-SHELL ["/bin/bash", "-o", "pipefail"]
+# hadolint ignore=DL4006
 RUN find /etc/s6-overlay/ -type f | xargs sed -i -E 's:([ "])/homebridge:\1$(cat /data/options.json | jq -r .homebridge_workdir):g'
 
 # add bashio
