@@ -1,5 +1,5 @@
 name: Homebridge
-version: 0.1.7
+version: 0.1.8
 stage: experimental
 slug: homebridge
 description: Lightweight HomeKit API implementation with plugin support
@@ -17,7 +17,7 @@ init: false
 map:
   - config:rw
 options:
-  homebridge_workdir: "/config/homebridge"
+  homebridge_workdir: "/data/homebridge"
 schema:
   homebridge_workdir: str
 image: davide125/{arch}-addon-homebridge
