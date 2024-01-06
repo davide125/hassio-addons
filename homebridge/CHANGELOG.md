@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.8] - 2024-01-06
+
+- Update Homebridge to 2023-12-30 and switch to the official container image.
+- Update bashio to 0.16.0.
+- Use `addon_config` for the Homebridge working directory; existing installs
+  will need to relocate their current config to `/addon_config/homebridge`.
+
 ## [0.1.7] - 2023-01-27
 
 - Update Homebridge to the latest version.
