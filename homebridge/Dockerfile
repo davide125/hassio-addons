@@ -1,12 +1,10 @@
 FROM homebridge/homebridge:2023-12-30
 
 # Relocate homebridge working directory so it can be persisted
-# hadolint ignore=DL4006
 RUN find /etc/s6-overlay/ -type f | xargs sed -i -E 's:([ "])/homebridge:\1/config:g'
 
 # add bashio
 ADD https://github.com/hassio-addons/bashio/archive/v0.16.0.tar.gz /tmp/bashio.tar.gz
-# hadolint ignore=DL3008
 RUN apt-get update \
     && apt-get install --no-install-recommends -y curl jq \
     && apt-get clean \
