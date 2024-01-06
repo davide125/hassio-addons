@@ -3,6 +3,7 @@ version: 0.1.8
 stage: experimental
 slug: homebridge
 description: Lightweight HomeKit API implementation with plugin support
+url: https://github.com/davide125/hassio-addons/tree/main/homebridge
 arch:
   - armv7
   - aarch64
