@@ -15,9 +15,5 @@ webui: http://[HOST]:[PORT:8581]
 host_network: true
 init: false
 map:
-  - config:rw
-options:
-  homebridge_workdir: "/data/homebridge"
-schema:
-  homebridge_workdir: str
+  - addon_config:rw
 image: davide125/{arch}-addon-homebridge
