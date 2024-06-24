@@ -1,3 +1,4 @@
+---
 name: Homebridge
 version: 0.1.8
 stage: experimental
@@ -17,4 +18,6 @@ host_network: true
 init: false
 map:
   - addon_config:rw
+backup_exclude:
+  - "node_modules"
 image: davide125/{arch}-addon-homebridge
