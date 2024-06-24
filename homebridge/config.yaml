@@ -17,4 +17,6 @@ host_network: true
 init: false
 map:
   - addon_config:rw
+backup_exclude:
+  - "config/node_modules"
 image: davide125/{arch}-addon-homebridge
