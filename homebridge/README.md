@@ -1,3 +1,8 @@
+# Deprecation warning
+
+This hasn't been updated since 2023-12-30.
+Switch to https://github.com/tronikos/home-assistant-addons/tree/main/homebridge that gets updated automatically.
+
 # Homebridge addon for Home Assistant
 
 This is an [Homebridge](https://homebridge.io) add-on for [Home Assistant](https://www.home-assistant.io). Homebridge provides a lightweight HomeKit API implementation with plugin support.
